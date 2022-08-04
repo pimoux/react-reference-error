@@ -15,7 +15,7 @@ function App() {
   };
 
   const removeButton = (button) => {
-    let newButtons = [...buttonList];
+    let newButtons = Array.from(buttonList);
     const buttonIndex = newButtons.findIndex((b) => b.value === button.value);
     newButtons[buttonIndex].selected = false;
     setButtonList(newButtons);
